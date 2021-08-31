@@ -36,6 +36,7 @@ namespace AspMultitier
         private void LoadEmployees()
         {
             GV_Emp.DataSource = employeeBusiness.GetEmployees();
+           
             GV_Emp.DataBind();
             
         }

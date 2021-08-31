@@ -19,7 +19,7 @@ namespace BusinessLayer
             employee = new EmployeeOperation();
         }
 
-        public DataSet GetEmployees()
+        public DataTable GetEmployees()
         {
             return employee.GetEmployees();
         }

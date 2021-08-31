@@ -11,16 +11,16 @@ namespace DataAccessLayer
 {
    public class EmployeeOperation:DbConfig
     {
-        public DataSet GetEmployees()
+        public DataTable GetEmployees()
         {
             string query = "select* from employees";
             using (SqlDataAdapter cmd = new SqlDataAdapter(query, connection))
             {
                 //if (connection.State == ConnectionState.Closed)
                 //  connection.Open();
-                DataSet ds = new DataSet();
+                DataTable ds = new DataTable();
                 cmd.Fill(ds);
-
+                cmd.Dispose();
                 return ds;
             }
  
