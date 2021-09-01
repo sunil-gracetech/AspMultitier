@@ -15,6 +15,7 @@ namespace AspMultitier
     {
         // private SqlConnection connection;
         private EmployeeBusiness employeeBusiness;
+        public string title = "Create Employee";
         private SharedBusinessServices businessServices;
 
         public Default()
@@ -143,6 +144,15 @@ namespace AspMultitier
 
             
 
+        }
+
+        protected void btn_view_Click(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            //Get the row that contains this button
+            GridViewRow gvr = (GridViewRow)btn.NamingContainer;
+            var lbl = gvr.FindControl("lbl_id") as Label;
+            Response.Redirect("details.aspx?id="+lbl.Text);
         }
     }
 }

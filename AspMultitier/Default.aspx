@@ -14,7 +14,7 @@
                 <div class="col-8 offset-2">
                     <div class="card">
                         <div class="card-header">
-                            <h4>Create Employee</h4>
+                            <h4><%= title %></h4>
                         </div>
                         <div class="card-body">
                             <div class="row">
@@ -130,7 +130,9 @@
 
                     <asp:TemplateField HeaderText="Action">
                         <ItemTemplate>
-                            <asp:Button Text="Edit" ID="btn_edit" OnClick="btn_edit_Click" CssClass="btn btn-info" runat="server" />
+                            <asp:Button Text="Detail" ID="btn_view" OnClick="btn_view_Click" CssClass="btn btn-info" runat="server" />
+
+                              <asp:Button Text="Edit" ID="Button1" OnClick="btn_edit_Click" CssClass="btn btn-info" runat="server" />
                             <asp:Button Text="Del" ID="btn_delete" OnClientClick="return confirm('Are you sure ?')" OnClick="btn_delete_Click" CssClass="btn btn-danger" runat="server" />
                         </ItemTemplate>
                     </asp:TemplateField>
